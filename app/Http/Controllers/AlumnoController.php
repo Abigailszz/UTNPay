@@ -21,7 +21,8 @@ class AlumnoController extends Controller
             'apellido' => 'required',
             'nombre' => 'required',
             'telefono' => 'required',
-            'curso' => 'required',
+            'correo'=> 'required',
+            
         ]);
 
         Alumno::create($request->all());
