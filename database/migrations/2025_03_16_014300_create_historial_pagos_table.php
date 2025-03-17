@@ -18,7 +18,7 @@ class CreateHistorialPagosTable extends Migration
             $table->unsignedBigInteger('curso_id'); // ID del curso
             $table->date('fecha_pago'); // Fecha del pago
             $table->decimal('monto', 10, 2); // Monto del pago
-            $table->timestamps();
+            //$table->timestamps();
     
             // Llaves foráneas
             $table->foreign('alumno_id')->references('id')->on('alumnos')->onDelete('cascade');

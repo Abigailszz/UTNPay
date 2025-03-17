@@ -15,6 +15,7 @@ class AlumnosImport implements ToModel
             'nombre' => $row[2],
             'telefono' => $row[3],
             'curso' => $row[4],
+            'correo' => $row[5]
         ]);
     }
 }

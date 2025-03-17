@@ -13,10 +13,11 @@ class Alumno extends Model
 
     // Agregar los campos que se pueden asignar masivamente
     protected $fillable = [
-        'nombre',
-        'apellido',
         'dni',
-        'correo', // Agregar el campo 'correo' aquí
+        'apellido',
+        'nombre',
+        'telefono',
+        'correo' 
     ];
 
     public function cursos()

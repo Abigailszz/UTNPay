@@ -10,6 +10,7 @@ class Curso extends Model
     use HasFactory;
 
     protected $table = 'cursos';
+    protected $fillable = ['nombre', 'descripcion', 'profesor', 'fecha_hora'];
 
     // Relación con la tabla alumnoxcurso
     public function alumnos()

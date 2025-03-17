@@ -18,30 +18,30 @@
         @include('navbar')
 
         <!-- Contenido principal a la derecha -->
-        <div class="flex-grow-1 custom-padding p-4">
+        <div class=" flex-grow-1 custom-padding p-4">
             <h1>Alumnos</h1>
             <!-- Formulario para ingresar datos del alumno -->
             <form action="{{ route('alumnos.store') }}" method="POST" enctype="multipart/form-data" class="row g-3">
                 @csrf
-                <div class="col-md-6">
+                <div class="">
                     <label for="dni" class="form-label">DNI</label>
                     <input type="text" class="form-control" id="dni" name="dni" required>
                 </div>
-                <div class="col-md-6">
+                <div class="">
                     <label for="apellido" class="form-label">Apellido</label>
                     <input type="text" class="form-control" id="apellido" name="apellido" required>
                 </div>
-                <div class="col-md-6">
+                <div class="">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" required>
                 </div>
-                <div class="col-md-6">
+                <div class="">
                     <label for="telefono" class="form-label">Teléfono</label>
                     <input type="text" class="form-control" id="telefono" name="telefono" required>
                 </div>
-                <div class="col-md-6">
-                    <label for="curso" class="form-label">Curso</label>
-                    <input type="text" class="form-control" id="curso" name="curso" required>
+                <div>
+                    <label for="correo" class="form-label">Email</label>
+                    <input type="correo" class="form-control" id="correo" name="correo" required>
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Guardar</button>

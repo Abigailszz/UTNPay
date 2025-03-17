@@ -5,8 +5,9 @@ use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\PagoController;
 use App\Http\Controllers\AlertaController;
 use App\Http\Controllers\HistorialPagosController;
-
+use App\Http\Controllers\CursoController; 
 use App\Http\Controllers\CorreoController;
+use App\Http\Controllers\AlumnoXCursoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ Route::get('/cursos', [CursoController::class, 'index'])->name('cursos.index');
 Route::get('/alumnos/{id}/cursos', [PagoController::class, 'getCursos'])->name('alumnos.cursos');
 Route::post('/historial-pagos', [HistorialPagosController::class, 'store'])->name('historial_pagos.store');
 
+Route::post('/alumnoxcurso', [AlumnoXCursoController::class, 'store'])->name('alumnoxcurso.store'); // Agregar esta línea
 
 
 Route::post('/enviar-correo', [CorreoController::class, 'enviarCorreo']);

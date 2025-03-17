@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('apellido');
             $table->string('nombre');
             $table->string('telefono');
-            $table->timestamps();
+            $table->string('correo');
+            //$table->timestamps();
         });
     }
 

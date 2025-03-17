@@ -61,3 +61,10 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     margin-bottom: 10px;
 }
+.navbar-logo {
+    height: 1.3em; 
+    width: 1.2em;
+}
+
+
+
