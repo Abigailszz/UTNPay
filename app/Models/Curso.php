@@ -11,7 +11,7 @@ class Curso extends Model
 
     protected $table = 'cursos';
     protected $fillable = ['nombre', 'descripcion', 'profesor', 'fecha_hora'];
-
+    public $timestamps = false;
     // Relación con la tabla alumnoxcurso
     public function alumnos()
     {
