@@ -35,9 +35,9 @@ Route::get('/alertas', [AlertaController::class, 'index'])->name('alertas.index'
 Route::get('/cursos', [CursoController::class, 'index'])->name('cursos.index');
 Route::get('/alumnos/{id}/cursos', [PagoController::class, 'getCursos'])->name('alumnos.cursos');
 Route::post('/historial-pagos', [HistorialPagosController::class, 'store'])->name('historial_pagos.store');
+Route::post('/alumnoxcurso', [AlumnoXCursoController::class, 'store'])->name('alumnoxcurso.store');
 
-Route::post('/alumnoxcurso', [AlumnoXCursoController::class, 'store'])->name('alumnoxcurso.store'); // Agregar esta línea
-
+Route::get('/alumnos/{id}/cursos', [AlumnoXCursoController::class, 'getCursos'])->name('alumnos.cursos');
 
 Route::post('/enviar-correo', [CorreoController::class, 'enviarCorreo']);
 

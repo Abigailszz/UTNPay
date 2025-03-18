@@ -11,7 +11,8 @@ class AlumnoController extends Controller
 {
     public function index()
     {
-        return view('alumnos.index');
+        $alumnos = Alumno::with('cursos')->get();
+        return view('alumnos.index', compact('alumnos'));
     }
 
     public function store(Request $request)

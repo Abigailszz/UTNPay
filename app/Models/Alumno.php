@@ -10,7 +10,7 @@ class Alumno extends Model
     use HasFactory;
 
     protected $table = 'alumnos'; // Nombre de la tabla en la base de datos
-
+    public $timestamps = false;
     // Agregar los campos que se pueden asignar masivamente
     protected $fillable = [
         'dni',

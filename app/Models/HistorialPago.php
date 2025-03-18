@@ -10,7 +10,7 @@ class HistorialPago extends Model
     use HasFactory;
 
     protected $table = 'historial_pagos';
-
+    public $timestamps = false;
     protected $fillable = [
         'alumno_id',
         'curso_id',
