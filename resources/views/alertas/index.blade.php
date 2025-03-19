@@ -59,9 +59,10 @@
     </div>
 </div>
 <script>
-    function enviarATodos() {
+    
+function enviarATodos() {
     if (confirm('¿Estás seguro de que deseas enviar correos a todos los alumnos con deudas?')) {
-        fetch(`/enviar-correos-todos`, {
+        fetch(`/enviar-correo`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

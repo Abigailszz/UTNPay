@@ -9,6 +9,7 @@ use App\Http\Controllers\CursoController;
 use App\Http\Controllers\CorreoController;
 use App\Http\Controllers\AlumnoXCursoController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +24,8 @@ use App\Http\Controllers\AlumnoXCursoController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/enviar-correo', [CorreoController::class, 'enviarCorreo']);
+
+
 Route::get('/alumnos', [AlumnoController::class, 'index'])->name('alumnos.index');
 Route::post('/alumnos', [AlumnoController::class, 'store'])->name('alumnos.store');
 Route::post('/alumnos/import', [AlumnoController::class, 'import'])->name('alumnos.import');
@@ -39,7 +41,5 @@ Route::post('/alumnoxcurso', [AlumnoXCursoController::class, 'store'])->name('al
 
 Route::get('/alumnos/{id}/cursos', [AlumnoXCursoController::class, 'getCursos'])->name('alumnos.cursos');
 
-Route::post('/enviar-correo', [CorreoController::class, 'enviarCorreo']);
 
-
-Route::post('/enviar-correos-todos', [CorreoController::class, 'enviarATodos']);
+Route::post('/enviar-correo', [CorreoController::class, 'enviarATodos']);

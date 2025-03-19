@@ -17,6 +17,14 @@ return new class extends Migration
             $table->id();
             $table->foreignId('alumno_id')->constrained('alumnos')->onDelete('cascade');
             $table->foreignId('curso_id')->constrained('cursos')->onDelete('cascade');
+
+            
+            $table->integer('pagos_realizados')->default(0);
+            $table->string('estado')->default('al dia');
+            $table->boolean('activo')->default(1);
+
+            
+       
             //$table->timestamps();
         });
     }

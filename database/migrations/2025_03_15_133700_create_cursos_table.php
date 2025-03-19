@@ -24,6 +24,10 @@ return new class extends Migration
             $table->string('fecha_inicio');
             $table->string('arancel_total');
             $table->string('arancel_cuota');
+            $table->integer('mes_inicio');
+            $table->integer('cant_meses');
+    
+         
             //$table->timestamps();
         });
     }
