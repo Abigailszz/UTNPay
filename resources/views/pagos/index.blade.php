@@ -122,7 +122,7 @@
 
     const formData = new FormData(this);
 
-    fetch('/historial-pagos', {
+    fetch('/historial-pago', {
         method: 'POST',
         headers: {
             'X-CSRF-TOKEN': '{{ csrf_token() }}',
